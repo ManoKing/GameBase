@@ -1,0 +1,20 @@
+﻿[
+  {
+    "id": 1,
+    "name": "布鞋",
+    "image": "icon-boot0",
+    "des": "安踏牌布鞋"
+  },
+  {
+    "id": 2,
+    "name": "铁剑",
+    "image": "sword2-icon",
+    "des": "这是一把神奇的铁剑"
+  },
+  {
+    "id": 3,
+    "name": "小血瓶",
+    "image": "icon-potion1",
+    "des": "貌似有毒的小血瓶"
+  }
+]

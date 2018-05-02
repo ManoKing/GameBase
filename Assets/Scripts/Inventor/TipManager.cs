@@ -16,6 +16,7 @@ public class TipManager : MonoBehaviour {
             GetComponent<RectTransform>().position=Input.mousePosition;
 
         }
+        transform.SetAsLastSibling();
     }
     //显示
     public void Show(int itemId,bool isRight=true)

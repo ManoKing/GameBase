@@ -16,11 +16,11 @@ public class NPCController : MonoBehaviour
 		{
 
 			DralogManege.Instance.Show(
-			new Dialog("NPC", "这里是哪里"),
-			new Dialog("玩家", "这里是战场。。。你怎么还没逃走？"),
-			new Dialog("NPC", "能不能带我走啊？"),
-			new Dialog("玩家", "不能"),
-				new Dialog("NPC", "......")
+			new Dialog("村民", "剑圣你终于来了，我等了你好久，快点去救救村民门吧"),
+			new Dialog("村民", "他们被万恶的恶人带入地穴，生命岌岌可危。"),
+			new Dialog("村民", "你往前走，前面有一个山洞，他其实是个传送门，站到哪里，就可以去地穴了。"),
+			new Dialog("村民", "你这里有一些物品，可能用的到，都给你吧"),
+				new Dialog("村民", "你是全村的希望。。。")
 			);
 		}
 
@@ -30,6 +30,7 @@ public class NPCController : MonoBehaviour
 		if (other.tag == "Player")
 		{
 			isTrigger = true;
+            Main.flog1 = 2;
 		}
 	}
 	private void OnTriggerExit(Collider other)

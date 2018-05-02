@@ -63,5 +63,6 @@ public class DralogManege : MonoBehaviour
 		{
 			Next();
 		}
+        transform.SetAsLastSibling();
 	}
 }

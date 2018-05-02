@@ -9,6 +9,7 @@ public class GridBase : MonoBehaviour ,IPointerExitHandler,IPointerEnterHandler{
     //判断当前是否为空
     public bool IsEmpty()
     {
+        
         if (transform.childCount==0)
         {
             return true;
@@ -43,7 +44,6 @@ public class GridBase : MonoBehaviour ,IPointerExitHandler,IPointerEnterHandler{
         }
         return transform.GetChild(0).GetComponent<Item>();
     }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (IsEmpty())

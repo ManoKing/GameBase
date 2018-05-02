@@ -16,9 +16,19 @@ public class CheckPersonController : UIBase {
     void CreateName()
     {
         string nameField = GetChildGameObject("InputName_N").GetComponent<InputField>().text;
-
+        if (nameField=="")
+        {
+            Main.ShowPromptBox("命名不能为空！！！");
+            return;
+        }
+        if (nameField.Length>6)
+        {
+			Main.ShowPromptBox("命名太长");
+            return;
+		}
+        Debug.Log(LoginController.nameField+nameField);
         SqliteManager.Instance.ExecuteNonQuery(string.Format("insert into player values('{0}','{1}')",LoginController.nameField,nameField));
-		
+		//生成主UI界面
 		UIManager.Instance.UnRegistPanelGameObject("CheckPerson(Clone)");
 		Destroy(gameObject);
 		GameObject obj = Resources.Load<GameObject>("MainUI/EasyTouth");

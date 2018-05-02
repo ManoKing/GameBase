@@ -99,14 +99,14 @@ public class EasyTouthController : MonoBehaviour, IDragHandler, IBeginDragHandle
 
 		}
 
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			fsmManger.ChangeState((byte)AnimalState.Jump);
-		}
-		if (Input.GetKeyDown(KeyCode.Q))
-		{
-			fsmManger.ChangeState((byte)AnimalState.Attack);
-		}
+		//if (Input.GetKeyDown(KeyCode.Space))
+		//{
+		//	fsmManger.ChangeState((byte)AnimalState.Jump);
+		//}
+		//if (Input.GetKeyDown(KeyCode.Q))
+		//{
+		//	fsmManger.ChangeState((byte)AnimalState.Attack);
+		//}
 		fsmManger.Update();
 	}
 }

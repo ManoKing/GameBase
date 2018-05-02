@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 using System.IO;
+using UnityEngine.UI;
 
 public class InventorControl : MonoBehaviour {
     public static InventorControl Instance;
@@ -12,7 +13,15 @@ public class InventorControl : MonoBehaviour {
     {
         Instance = this;
     }
-
+    private void Start()
+    {
+        transform.Find("Load").GetComponent<Button>().onClick.AddListener(Load);
+        transform.Find("Load_Close").GetComponent<Button>().onClick.AddListener(Close);
+    }
+    void Close()
+    {
+        Destroy(gameObject);
+    }
     //得到一个空的格子
     public InventorGridControl GetEnmptyGrid()
     {

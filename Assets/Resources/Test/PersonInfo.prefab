@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 114560719183303972}
   - component: {fileID: 114302062308400630}
   m_Layer: 5
-  m_Name: ChangeNameBtn_L
+  m_Name: ChangeNameBtn_N
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1872,8 +1872,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: 205}
-  m_SizeDelta: {x: 80, y: 30}
+  m_AnchoredPosition: {x: 45.55, y: 205}
+  m_SizeDelta: {x: 129.1, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224058084244937556
 RectTransform:

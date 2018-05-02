@@ -25,7 +25,11 @@ public class LoginController : UIBase {
 	{
 	    nameField = GetChildGameObject("inp_act_N").GetComponent<InputField>().text;
 		string pwdFileld = GetChildGameObject("inp_psw_N").GetComponent<InputField>().text;
-		SqliteDataReader reader = SqliteManager.Instance.ExecuteReader("select * from user where name='" + nameField + "'");
+        if (nameField==""||pwdFileld=="")
+        {
+            Main.ShowPromptBox("填写不能为空");
+        }
+        SqliteDataReader reader = SqliteManager.Instance.ExecuteReader("select * from user where name='" + nameField + "'");
 		if (reader.Read())
 		{
 			string password = reader.GetString(1);
@@ -40,12 +44,12 @@ public class LoginController : UIBase {
 			}
 			else
 			{
-				Debug.Log("密码错误");
+                Main.ShowPromptBox("密码错误");
 			}
 		}
 		else
 		{
-			Debug.Log("账号不存在");
+            Main.ShowPromptBox("账号不存在");
 		}
 		reader.Close();
 	}

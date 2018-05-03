@@ -23,7 +23,7 @@ public class EasyTouthController : MonoBehaviour, IDragHandler, IBeginDragHandle
 		Animator ani = targetObj.GetComponent<Animator>();
 		PlayerIdle tmpIdle = new PlayerIdle(ani);
 		fsmManger.AddState(tmpIdle);
-		PlayerAttack tmpAttack = new PlayerAttack(ani, ChangeState);
+		PlayerAttack tmpAttack = new PlayerAttack(ani);
 		fsmManger.AddState(tmpAttack);
 		PlayerWalk tmpWalk = new PlayerWalk(ani);
 		fsmManger.AddState(tmpWalk);

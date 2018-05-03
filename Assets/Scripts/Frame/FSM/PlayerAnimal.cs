@@ -29,44 +29,24 @@ public class PlayerIdle : FSMBase
 
 public class PlayerAttack : FSMBase
 {
-    ChangeDelegate changeIdle;
-    public PlayerAttack(Animator tmpAnimator,ChangeDelegate tmpDlegate)
-    {
-        this.animator = tmpAnimator;
-        changeIdle = tmpDlegate;
-    }
+	public PlayerAttack(Animator tmpAnimator)
+	{
+		this.animator = tmpAnimator;
+	}
+	public override void OnEnter()
+	{
+		this.animator.SetInteger("StateIndex", 2);
+	}
 
-    float timer = 0;
-    bool isPlayFinish;
-    public override void OnEnter()
-    {
-        this.animator.SetInteger("StateIndex",2);
-        timer = 0;
-        isPlayFinish = false;
-    }
+	public override void OnLeave()
+	{
 
-    public override void OnLeave()
-    {
-        timer = 0;
-        isPlayFinish = false;
-    }
+	}
 
-    public override void UpDate()
-    {
-        timer += Time.deltaTime;
-        if (timer>0.28f&&!isPlayFinish)
-        {
-            isPlayFinish = true;
+	public override void UpDate()
+	{
 
-            //do samething
-        }
-        if (timer>1)
-        {
-            timer = 0;
-            isPlayFinish = false;
-            changeIdle((byte)AnimalState.Idle);
-        }
-    }
+	}
 }
 public class PlayerWalk : FSMBase
 {

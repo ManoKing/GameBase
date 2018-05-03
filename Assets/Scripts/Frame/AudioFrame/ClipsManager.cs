@@ -20,7 +20,7 @@ public class ClipsManager  {
     public void Initial()
     {
         //  从 配置文件  读取  txt
-        clipName = new string[] { "bg-city", "Bg-transcript", "bg-choice" , "ice_attack","bird" };
+        clipName = new string[] { "bg-city", "Bg-transcript", "bg-choice" , "ice_attack","bird","attack1","attack2","attack3","Skill","Hurt"};
 
 
 

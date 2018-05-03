@@ -35,7 +35,6 @@ public class LoginController : UIBase {
 			string password = reader.GetString(1);
 			if (password == pwdFileld)
 			{
-				Debug.Log("登录成功");
                 //登录成功
 				UIManager.Instance.UnRegistPanelGameObject("Login(Clone)");
 				Destroy(gameObject);

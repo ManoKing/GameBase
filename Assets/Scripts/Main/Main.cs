@@ -8,6 +8,7 @@ public class Main : MonoBehaviour {
     public static int flog;
     public static int flog1;
     public static int flog2;
+    public static float y;
 	void Start () {
         TipManager.Instance.Hide();
         flog = 0;

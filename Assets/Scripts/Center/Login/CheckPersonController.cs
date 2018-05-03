@@ -26,7 +26,6 @@ public class CheckPersonController : UIBase {
 			Main.ShowPromptBox("命名太长");
             return;
 		}
-        Debug.Log(LoginController.nameField+nameField);
         SqliteManager.Instance.ExecuteNonQuery(string.Format("insert into player values('{0}','{1}')",LoginController.nameField,nameField));
 		//生成主UI界面
 		UIManager.Instance.UnRegistPanelGameObject("CheckPerson(Clone)");
